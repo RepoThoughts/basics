@@ -1,0 +1,2 @@
+# basics
+Django startup projetcs
