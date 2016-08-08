@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .navbar-inverse {
+        background-color: yellow;
+    border-color: yellow;
+}
+        .navbar-inverse .navbar-nav>.active>a{
+            background-color: #000099;
+        }
+        .navbar-inverse .navbar-nav>.active>a:hover{
+            background-color: #0000ff;
+        }
+        .jumbotron{
+            background-color:#0000ff;
+            color:white;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/crud">CrudApp</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="">Home</a></li>
+          <li><a href="/crud/retrieve/">Price</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+  <h2>Hover Rows</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Sold</th>
+          <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in items%}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.sold }}</td>
+        <td>R {{ item.price }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
