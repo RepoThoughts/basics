@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         .navbar-inverse {
-        background-color: yellow;
-    border-color: yellow;
+        background-color: #117864 ;
+    border-color: #1d8348;
 }
         .navbar-inverse .navbar-nav>.active>a{
             background-color: #000099;
         }
-        .navbar-inverse .navbar-nav>.active>a:hover{
-            background-color: #0000ff;
+
         }
         .jumbotron{
-            background-color:#0000ff;
-            color:white;
+            background-color: #884ea0;
+            color:black;
         }
         </style>
 </head>
@@ -29,14 +28,15 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="">Home</a></li>
-          <li><a href="/crud/retrieve/">Price</a></li>
+          <li><a href="/crud/retrieve/">Display contents</a></li>
         </ul>
       </div>
     </nav>
     <div class="jumbotron">
       <h1 class="text-center">Crud App</h1>
-      <p class="text-center">Welcome to Crud System</p>
+      <p class="text-center">Welcome to Crud Application one of its own</p>
     </div>
+
     <div class="container">
         <form action="" method="post">
             {% csrf_token %}
