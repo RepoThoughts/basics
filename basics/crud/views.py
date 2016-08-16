@@ -15,8 +15,9 @@ def index(request):
         name = request.POST.get('name')
         sold = request.POST.get('sold')
         price = request.POST.get('price')
-
-        model_save = Purchases(name=name, sold=sold, price=price)
+	state = request.POST.get('state')
+	description = request.POST.get('description')
+        model_save = Purchases(name=name, sold=sold, price=price,description=description,state=state)
         model_save.save()
     if request.method == "GET":
         print "hi"
